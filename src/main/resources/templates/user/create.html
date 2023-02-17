@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe App </title>
+</head>
+<body>
+<h1>Form </h1>
+<p>welcome</p>
+<form th:method="post" th:action="@{/user/save}" th:object="${user}">
+<!--    <div>-->
+<!--        <label>ID</label>-->
+<!--        <input type="text"  th:field="*{id}" th:value="${user.id}">-->
+<!--    </div>-->
+    <div>
+        <label>Fullname</label>
+        <input type="text" th:field="*{username}" th:value="${user.fullname}">
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="text" th:field="*{password}" th:value="${user.password}">
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="text" th:field="*{username}" th:value="${user.email}">
+    </div>
+    <div>
+        <label>Mobile Number</label>
+        <input type="text" th:field="*{password}" th:value="${user.mobile_no}">
+    </div>
+    <br/>
+    <input type="submit" class="btn btn-primary">
+    <input type="reset" class="btn btn-danger">
+</form>
+
+</body>
+</html>
+

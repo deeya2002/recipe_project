@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{~/css/style.css}" rel ="stylesheet">
+<!--    <script th:src ="@{~/js/index.js}"></script>-->
+</head>
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+<body>
+<h1>User List</h1>
+<a th:href="@{/user/create}"> create new user</a>
+<table >
+    <tr>
+        <th>id</th>
+        <th>password</th>
+        <th>username</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="user:${userList}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.password}"></td>
+        <td><a th:href="@{~/user/edit/}+${user.id}">
+            Edit
+        </a>
+            |
+            <a th:href="@{~/user/delete/}+${user.id}">
+                delete
+            </a>
+        </td>
+    </tr>
+</table>
+<div class = "imagecontainer">
+    <img th:src="@{~/images/abc.webp}"/>
+</div>
+</body>
+</html>

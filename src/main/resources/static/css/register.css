@@ -1,0 +1,150 @@
+*{
+    font-family:'Poppins',sans-serif;
+}
+.wrapper{
+    background: #ececec;
+    padding: 0 20px 0 20px;
+    background-image: url("https://img.freepik.com/free-photo/top-view-different-seasonings-with-fresh-vegetables-dark-desk-spicy-pepper-food-salad-health_140725-86007.jpg?w=996&t=st=1676109617~exp=1676110217~hmac=3cc314718bd0a914ad45120dccb3a2a2ae0c12d31da55cf5dabf3819763a19d0");
+    background-size: cover;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.row{
+    width: 400px;
+    height: 550px;
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.4);
+}
+header{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Arial Rounded MT Bold";
+}
+
+.text{
+    position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text p{
+    color: #fff;
+    font-size: 22px;
+}
+i{
+    font-weight: 400;
+    font-size: 15px;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+.input-box{
+    width: 300px;
+    box-sizing:border-box;
+}
+.input-box header{
+    font-weight: 700;
+    text-align: center;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input{
+    height: 45px;
+    width: 100%;
+    background:transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: white;
+}
+.input-box .input-field label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box .input-focus ~ label{
+    top: -10px;
+    font-size: 13px;
+}
+.input-box .input-valid ~ label{
+    top: -10px;
+    font-size: 13px;
+    color: #5d5076;
+}
+.input-box .input-focus, .input-valid{
+    border-bottom: 1px #743ae1;
+}
+.submit{
+    text-align: center;
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #ececec;
+    border-radius: 5px;
+    transition: .4s;
+}
+.submit:hover{
+    background: rgba(37, 95, 156, 0.9);
+    color: #fff;
+}
+.signin{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+.goback{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+span a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+}
+span a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+label{
+    color: white;
+}
+@media only screen and (max-width:768px){
+    .side-image{
+        border-radius: 10px 10px 0 0;
+    }
+    img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+    .text{
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+    .text p,i{
+        font-size: 17px;
+    }
+    .row{
+        max-width: 420px;
+        width: 100px;
+    }
+}

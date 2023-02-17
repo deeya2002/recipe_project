@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.log {
+    height: 100%;
+    width: 100%;
+    background-image: url(/static/images/home.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.form-box {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    margin: 6% auto;
+    background: #fac031;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 55px;
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px white;
+    border-radius: 35px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    border-radius: 35px;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.209), lavender);
+    border-radius: 35px;
+    transition: .5s;
+}
+
+.input-group {
+    top: 150px;
+    position: absolute;
+    width: 220px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 45%;
+    padding: 0;
+    cursor: pointer;
+    margin: auto;
+    background: linear-gradient(to right, white, lavender);
+    border-radius: 35px;
+}
+
+.check-box {
+    margin: 10px 10px 20px 0;
+}
+
+.chech-box {
+    margin: 10px 10px 10px 0;
+}
+
+span {
+    color: white;
+    font-size: 12px;
+    bottom: 30px;
+    position: absolute;
+}
+
+#login {
+    left: 50px;
+}
+
+#register {
+    left: 450px;
+}
+
+.input-class {
+    top: 150px;
+    position: absolute;
+    width: 220px;
+    transition: .5s;
+}
+
+.submit {
+    border-radius: 35px;
+    width: 40%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.209), lavender);
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.submit-class {
+    width: 40%;
+    padding: 0;
+    cursor: pointer;
+    margin: 10px 0px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.209), lavender);
+    border-radius: 35px;
+}
+
+spa {
+    color: white;
+    font-size: 12px;
+    bottom: 80px;
+    position: absolute;
+}
