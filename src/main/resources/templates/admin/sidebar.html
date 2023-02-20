@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+    <!-- Boxicons CSS-->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <!--<title>Dashboard Sidebar Menu</title>-->
+</head>
+
+<body>
+    <script>
+
+        function handleInput() {
+            // Get the current value of the input field
+            var inputValue = document.getElementsByName("sarchText")[0].value;
+
+            // Perform an action based on the input value
+
+        }
+    </script>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                  <!--<img src="logo.png" alt="">-->
+              </span>
+
+                <div class="text logo-text">
+                    <span class="name">Admin</span>
+                    <span class="profession">Recipe Web</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a th:href="@{/dashboard}">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a th:href="@{/foodcatego/create}">
+                            <i class='bx bx-diamond icon'></i>
+                            <span class="text nav-text">Add Category</span>
+
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a th:href="@{/foodcatego}">
+                            <i class='bx bx-food-menu icon'></i>
+                            <span class="text nav-text">View Category</span>
+
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a th:href="@{/foods/create}">
+                            <i class='bx bx-bowl-rice icon'></i>
+                            <span class="text nav-text">Add Food</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a th:href="@{/foods}">
+                            <i class='bx bxs-bowl-hot icon'></i>
+                            <span class="text nav-text">add Recipes</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="nav-link">
+                    <a th:href="@{/logout}">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- <section class="home">
+        <div>
+            <link href="home0.html">
+        </div>
+    </section> -->
+
+    <script th:src="@{~/js/sidebar.js}"></script>
+    <div>
+        <div class="about" id="About">
+            <div class="about_main">
+                <div class="image">
+                    <img src="image/Food-Plate.png">
+                </div>
+
+                <div class="about_text">
+                    <h1><span>About</span>Us</h1>
+                    <h3>Why Choose us?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, est. Doloremque sapiente veritatis laboriosam corrupti optio et maxime. Ad, amet explicabo eaque labore cupiditate quasi nostrum nemo recusandae id quibusdam? Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Doloremque ab, dolores pariatur cum exercitationem, illo nisi veritatis vitae ea deleniti fugiat quisquam tempora, accusantium corrupti excepturi optio. Inventore, cupiditate recusandae.
+                    </p>
+                </div>
+
+            </div>
+
+            <a href="#" class="about_btn">See Info</a>
+
+        </div>
+        <!--Menu-->
+        <div class="menu" id="Menu">
+            <h1>Our<span>Menu</span></h1>
+            <script>
+                recipe.map((item, index) => {
+                    console.log(item);
+                    var body = document.getElementsByTagName("body")[0];
+                    var newElement = document.createElement("p");
+                    newElement.te = item.name;
+                    body.appendChild(newElement)
+                })
+            </script>
+            <div class="menu_box">
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/buger.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Buger</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">                    
+                            See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/pasta.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>pasta</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/lasagna.webp">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>lasagna</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/chocolate_Drink.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Drink</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/pizza.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>pizza</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/Hot_dog.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Hot Dog</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/juse.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Juse</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/biryani.webp">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Biryani</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/chocolate.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Chocolate</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/ice_cream.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Ice Cream</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/Spanchi.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Spanchi</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+                <div class="menu_card">
+
+                    <div class="menu_image">
+                        <img src="image/sandwich.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Sandwich</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <div class="menu_icon">
+                            <i class='bx bx-pen icon pen'></i>
+                            <i class='bx bx-minus-circle icon minus'></i>
+                        </div>
+                        <a href="#" class="menu_btn">See Info</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!--category-->
+
+        <div class="category" id="category">
+            <h1>Our<span>category</span></h1>
+
+            <div class="category_box">
+                <div class="category_card">
+
+                    <div class="category_image">
+                        <img src="image/category/breakfast/eggbreag.jpg">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="category_info">
+                        <h2>Breakfast</h2>
+                        <div class="category_icon">
+                        </div>
+                        <a href="#" class="category_btn">See Types</a>
+                    </div>
+
+                </div>
+                <div class="category_card">
+
+                    <div class="category_image">
+                        <img src="image/category/snacks/momo.png">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="category_info">
+                        <h2>Snacks</h2>
+                        <div class="category_icon">
+                        </div>
+                        <a href="#" class="category_btn">
+                             See Types</a>
+                    </div>
+
+                </div>
+
+                <div class="category_card">
+
+                    <div class="category_image">
+                        <img src="image/category/pizza/cheesepizza.png">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="category_info">
+                        <h2>Pizza</h2>
+                        <div class="category_icon">
+
+                        </div>
+                        <a href="#" class="category_btn">See Types</a>
+                    </div>
+
+                </div>
+                <div class="category_card">
+                    <div class="category_image">
+                        <img src="image/category/dinner/dinner.png">
+                    </div>
+
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="category_info">
+                        <h2>Dinner</h2>
+                        <div class="category_icon">
+                        </div>
+                        <a href="#" class="category_btn">See Types</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

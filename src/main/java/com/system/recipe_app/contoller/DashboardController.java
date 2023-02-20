@@ -1,4 +1,4 @@
-package com.systemplant.plant_web_system.controller;
+package com.system.recipe_app.contoller;
 
 
 import lombok.RequiredArgsConstructor;
@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class DashboardController {
     @GetMapping
     public String getPage(){
-        return "dashboard";
+        return "/admin/sidebar";
     }
 }

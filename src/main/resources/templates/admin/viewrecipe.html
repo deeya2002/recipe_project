@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+           crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+          <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+          <!-- Boxicons CSS-->
+          <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+          <link rel="stylesheet" th:href="@{/css/viewcategory.css}">
+    <title>add recipe</title>
+</head>
+<body>
+<nav class="sidebar close">
+    <header>
+        <div class="image-text">
+                <span class="image">
+                  <!--<img src="logo.png" alt="">-->
+              </span>
+
+            <div class="text logo-text">
+                <span class="name">Admin</span>
+                <span class="profession">Recipe Web</span>
+            </div>
+        </div>
+
+        <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menu-bar">
+        <div class="menu">
+
+            <li class="search-box">
+                <i class='bx bx-search icon'></i>
+                <input type="text" placeholder="Search...">
+            </li>
+
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a th:href="@{/dashboard}">
+                        <i class='bx bx-home-alt icon'></i>
+                        <span class="text nav-text">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a th:href="@{/foodcatego/create}">
+                        <i class='bx bx-diamond icon'></i>
+                        <span class="text nav-text">Add Category</span>
+
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a th:href="@{/foodcatego}">
+                        <i class='bx bx-food-menu icon'></i>
+                        <span class="text nav-text">View Category</span>
+
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a th:href="@{/foods/create}">
+                        <i class='bx bx-bowl-rice icon'></i>
+                        <span class="text nav-text">Add Food</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a th:href="@{/foods}">
+                        <i class='bx bxs-bowl-hot icon'></i>
+                        <span class="text nav-text">add Recipes</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a th:href="@{/logout}">
+                    <i class='bx bx-log-out icon'></i>
+                    <span class="text nav-text">Logout</span>
+                </a>
+            </li>
+            <li class="mode">
+                <div class="sun-moon">
+                    <i class='bx bx-moon icon moon'></i>
+                    <i class='bx bx-sun icon sun'></i>
+                </div>
+                <span class="mode-text text">Dark mode</span>
+                <div class="toggle-switch">
+                    <span class="switch"></span>
+                </div>
+            </li>
+
+        </div>
+    </div>
+
+</nav>
+<script th:href="@{/js/sidebar.js}"></script>
+
+<div class="container">
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">SN</th>
+            <th scope="col">Recipe Name</th>
+           <th scope="col">Type</th>
+            <th scope="col">Image</th>
+            <th scope="col">Description</th>
+            <th scope="col">Ingrediants</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="food:${foodList}">
+            <td th:text="${food.id}"></td>
+            <td th:text="${food.food_name}"></td>
+            <td th:text="${food.foodCategory.name}"></td>
+            <td><img height="100px" width="100px" alt="img not found" th:src="${food.image}"></td>
+            <td th:text="${food.description}"></td>
+            <td th:text="${food.ingredients}"></td>
+            <td th:text="${food.duration}"></td>
+            <td><a th:href="@{~/foods/edit/}+${food.id}" class="btn btn-warning">Update</a></td>
+            <td><a th:href="@{~/foods/delete/}+${food.id}" class="btn btn-danger">Delete</a></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

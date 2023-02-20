@@ -12,14 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginController {
     @GetMapping("/login")
     public String getPage(){
-
         return "login";
     }
-//    @PostMapping("/logout")
-//    public String logout(Authentication authentication) {
-//        if (authentication.isAuthenticated()) {
-//            SecurityContextHolder.clearContext();
-//        }
-//        return "redirect:/login";
-//    }
+    @PostMapping("/logout")
+    public String logout(Authentication authentication) {
+        if (authentication.isAuthenticated()) {
+            SecurityContextHolder.clearContext();
+        }
+        return "redirect:/login";
+    }
 }
