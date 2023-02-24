@@ -9,15 +9,17 @@
            crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{~/css/styles.css}">
           <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
           <!-- Boxicons CSS-->
           <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
-          <link rel="stylesheet" th:href="@{/css/viewcategory.css}">
+          <link rel="stylesheet" th:href="@{/css/viewrecipe.css}">
     <title>add recipe</title>
 </head>
 <body>
+
 <nav class="sidebar close">
+    <script th:src="@{~/js/sidebar.js}"></script>
     <header>
         <div class="image-text">
                 <span class="image">
@@ -102,7 +104,7 @@
     </div>
 
 </nav>
-<script th:href="@{/js/sidebar.js}"></script>
+
 
 <div class="container">
     <table class="table">
@@ -128,7 +130,7 @@
             <td th:text="${food.description}"></td>
             <td th:text="${food.ingredients}"></td>
             <td th:text="${food.duration}"></td>
-            <td><a th:href="@{~/foods/edit/}+${food.id}" class="btn btn-warning">Update</a></td>
+            <td><a th:href="@{~/foods/edit/}+${food.id}" class="btn btn-primary">Update</a></td>
             <td><a th:href="@{~/foods/delete/}+${food.id}" class="btn btn-danger">Delete</a></td>
 
         </tr>
