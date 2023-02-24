@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class DashboardController {
     @GetMapping
     public String getPage(){
-        return "/admin/sidebar";
+        return "/admin/dashboard";
     }
 }

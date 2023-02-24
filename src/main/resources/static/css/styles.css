@@ -176,26 +176,6 @@ body.dark .sidebar header .toggle {
     margin-top: 40px;
 }
 
-.sidebar li.search-box {
-    border-radius: 6px;
-    background-color: var(--primary-color-light);
-    cursor: pointer;
-    transition: var(--tran-05);
-}
-
-.sidebar li.search-box input {
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    background-color: var(--primary-color-light);
-    color: var(--text-color);
-    border-radius: 6px;
-    font-size: 17px;
-    font-weight: 500;
-    transition: var(--tran-05);
-}
-
 .sidebar li a {
     list-style: none;
     height: 100%;
@@ -345,9 +325,11 @@ body.dark .home .text {
 }
 
 .about .about_main .image img {
-    width: 800px;
+    width: 900px;
     position: relative;
     top: 60px;
+    left: 110px;
+    left: 100px;
 }
 
 .about .about_main .about_text h1 span {
@@ -355,37 +337,32 @@ body.dark .home .text {
     margin-right: 15px;
     font-family: mv boli;
     color: var(--text-color);
+
 }
 
 .about .about_main .about_text h1 {
-    font-size: 55px;
+
+    font-size: 3vw;
     position: relative;
     bottom: 50px;
     color: var(--text-color);
 }
 
 .about .about_main .about_text h3 {
-    font-size: 30px;
+]
+    font-size: 2vw;
     margin: 0 0 50px 0;
     color: var(--text-color);
 }
 
 .about .about_main .about_text p {
+    left: 250px;
     width: 650px;
     text-align: justify;
+    font-size: 1vw;
     margin-right: 30px;
     line-height: 22px;
     color: var(--text-color);
-}
-
-.about .about_btn {
-    background: #fac031;
-    padding: 12px 25px;
-    text-decoration: none;
-    color: #fff;
-    position: relative;
-    left: 55%;
-    bottom: 30px;
 }
 
 

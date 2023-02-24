@@ -19,7 +19,6 @@
 <body>
 
 <nav class="sidebar close">
-    <script th:src="@{~/js/sidebar.js}"></script>
     <header>
         <div class="image-text">
                 <span class="image">
@@ -37,11 +36,6 @@
 
     <div class="menu-bar">
         <div class="menu">
-
-            <li class="search-box">
-                <i class='bx bx-search icon'></i>
-                <input type="text" placeholder="Search...">
-            </li>
 
             <ul class="menu-links">
                 <li class="nav-link">
@@ -104,7 +98,7 @@
     </div>
 
 </nav>
-
+<script th:src="@{~/js/sidebar.js}"></script>
 
 <div class="container">
     <table class="table">
@@ -131,7 +125,7 @@
             <td th:text="${food.ingredients}"></td>
             <td th:text="${food.duration}"></td>
             <td><a th:href="@{~/foods/edit/}+${food.id}" class="btn btn-primary">Update</a></td>
-            <td><a th:href="@{~/foods/delete/}+${food.id}" class="btn btn-danger">Delete</a></td>
+            <td><a th:href="@{~/foods/delete/}+${food.id}" class="btn btn-dark">Delete</a></td>
 
         </tr>
         </tbody>

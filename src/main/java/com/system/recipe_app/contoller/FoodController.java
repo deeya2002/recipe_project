@@ -2,7 +2,9 @@ package com.system.recipe_app.contoller;
 
 import com.system.recipe_app.Service.FoodCategoryService;
 import com.system.recipe_app.Service.FoodService;
+import com.system.recipe_app.Service.UserService;
 import com.system.recipe_app.entity.Food;
+import com.system.recipe_app.entity.User;
 import com.system.recipe_app.pojo.FoodPojo;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -21,6 +24,7 @@ import java.io.IOException;
 public class FoodController {
     private final FoodService foodService;
     private final FoodCategoryService foodCategoryService;
+    private  final UserService userService;
 
     @GetMapping
 //    public String plantHome(){
@@ -60,4 +64,12 @@ public class FoodController {
         foodService.deleteById(id);
         return "redirect:/foods";
     }
+
+    @GetMapping("/userlist")
+    public String getUserList(Model model){
+        List<User> users=userService.fetchAll();
+        model.addAttribute("userList",users);
+        return "admin/userview";
+    }
+
 }

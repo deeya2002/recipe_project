@@ -34,11 +34,6 @@
         <div class="menu-bar">
             <div class="menu">
 
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a th:href="@{/dashboard}">
@@ -76,6 +71,12 @@
                             <span class="text nav-text">add Recipes</span>
                         </a>
                     </li>
+                    <li class="nav-link">
+                        <a th:href="@{/foods/userlist}">
+                            <i class='bx bx-male-female icon'></i>
+                            <span class="text nav-text">Users</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="bottom-content">
@@ -101,32 +102,24 @@
 
     </nav>
 
-    <!-- <section class="home">
-        <div>
-            <link href="home0.html">
-        </div>
-    </section> -->
-
     <script th:src="@{~/js/sidebar.js}"></script>
     <div>
         <div class="about" id="About">
             <div class="about_main">
                 <div class="image">
-                    <img src="image/Food-Plate.png">
+                    <img th:src="@{~/images/food/Food-Plate.webp}" style="max-width: 100%;height: auto;">
                 </div>
 
                 <div class="about_text">
                     <h1><span>About</span>Us</h1>
-                    <h3>Why Choose us?</h3>
+                    <h3>Admin Dashboard</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, est. Doloremque sapiente veritatis laboriosam corrupti optio et maxime. Ad, amet explicabo eaque labore cupiditate quasi nostrum nemo recusandae id quibusdam? Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Doloremque ab, dolores pariatur cum exercitationem, illo nisi veritatis vitae ea deleniti fugiat quisquam tempora, accusantium corrupti excepturi optio. Inventore, cupiditate recusandae.
+                       Welcome to Admin Dashboard <br></br>
+                        Let's Add Some Recipes!!
                     </p>
                 </div>
 
             </div>
-
-            <a href="#" class="about_btn">See Info</a>
 
         </div>
         <!--Menu-->

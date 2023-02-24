@@ -378,15 +378,6 @@ body.dark .home .text {
     color: var(--text-color);
 }
 
-.about .about_btn {
-    background: #fac031;
-    padding: 12px 25px;
-    text-decoration: none;
-    color: #fff;
-    position: relative;
-    left: 55%;
-    bottom: 30px;
-}
 
 
 /*Menu*/
