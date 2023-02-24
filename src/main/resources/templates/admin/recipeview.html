@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/recipeview.css">
+    <link rel="stylesheet" th:href="@{/css/recipeview.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -14,6 +15,7 @@
 </head>
 
 <body>
+<script th:src="@{~/js/sidebar.js}"></script>
     <div class="container mt-5">
         <div class="row">
             <div class="col-sm-5 d-flex justify-content-center">
@@ -21,15 +23,15 @@
                      alt="">
             </div>
             <div class="col-sm-7 mt-5">
-                <h2 th:text="${plant.name}">Name : Hot Dog</h2>
-                <h3 th:text="${plant.category.name}">Category : <spna >Appetizer</spna></h3>
-                <h3 th:text="${plant.category.name}">Ingrediants : <spna >jsagbs sbacyhbasjc aschasbjc</spna></h3>
+                <h2 th:text="${food.name}">Name : Hot Dog</h2>
+                <h3 th:text="${food.category.name}">Category : <spna >Appetizer</spna></h3>
+                <h3 th:text="${food.category.name}">Ingrediants : <spna >jsagbs sbacyhbasjc aschasbjc</spna></h3>
 
                 <h5>Time:
                     <spna >85</spna> minutes.
                 </h5>
-                <p th:text="${plant.description}"></p>
-                <a href="" th:href="@{/addToCart/{id}(id = ${plant.id})}" class="btn btn-primary">Add to Favourite</a>
+                <p th:text="${food.description}"></p>
+                <a href="" th:href="@{/addToCart/{id}(id = ${food.id})}" class="btn btn-primary">Add to Favourite</a>
             </div>
         </div>
     </div>

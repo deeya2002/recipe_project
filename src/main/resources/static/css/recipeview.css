@@ -19,6 +19,8 @@ body {
     align-items: center;
     min-height: 100vh;
     background: var(--light-blue);
+    background-image: url("https://w0.peakpx.com/wallpaper/553/950/HD-wallpaper-chocolate-nuts-sweets-chocolate-balls-candies-thumbnail.jpg");
+    background-size: cover;
 }
 
 .container {

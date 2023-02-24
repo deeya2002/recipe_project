@@ -19,6 +19,8 @@ body {
     align-items: center;
     min-height: 100vh;
     background: var(--light-blue);
+    background-image: url("https://w0.peakpx.com/wallpaper/856/312/HD-wallpaper-chocolate-macaroons-biscuits-chocolate-biscuits-sweets-baked-goods.jpg");
+    background-size: cover;
 }
 
 .container {

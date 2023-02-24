@@ -1,10 +1,10 @@
 *{
-    font-family:'Poppins',sans-serif;
+    font-family: "Arial Rounded MT Bold";
 }
 .wrapper{
     background: #ececec;
     padding: 0 20px 0 20px;
-    background-image: url("https://img.freepik.com/free-photo/top-view-fresh-vegetables-various-spices-small-bowls-wooden-spoons-table-free-space_140725-147473.jpg?w=996&t=st=1676104292~exp=1676104892~hmac=df476e2dd9d8ef6ac047e8b69ea2ff819ca151bc179d5e3a6a01b7a37e18a343");
+    background-image: url("https://i.pinimg.com/564x/5e/98/57/5e98579d72e05ae0532439cbe5c2f6f6.jpg");
     background-size: cover;
 }
 .main{
@@ -14,14 +14,14 @@
     min-height: 100vh;
 }
 .row{
-    width: 400px;
+    width: 300px;
     height: 450px;
     border-radius: 10px;
-    background: transparent;
+    background: white;
     box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.4);
 }
 header{
-    color: white;
+    color: black;
     text-align: center;
     font-size: 30px;
     font-family: "Arial Rounded MT Bold";
@@ -34,7 +34,7 @@ header{
     transform: translate(-50%, -50%);
 }
 .text p{
-    color: #fff;
+    color: black;
     font-size: 22px;
 }
 i{
@@ -69,7 +69,7 @@ i{
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     outline: none;
     margin-bottom: 20px;
-    color: white;
+    color: black;
 }
 .input-box .input-field label{
     position: absolute;
@@ -95,13 +95,13 @@ i{
     border: none;
     outline: none;
     height: 45px;
-    background: #ececec;
-    border-radius: 5px;
+    background: #daa573;
+    border-radius: 15px;
     transition: .4s;
 }
 .submit:hover{
-    background: rgba(37, 95, 156, 0.9);
-    color: #fff;
+    background: rgb(218, 150, 85);
+    color: black;
 }
 .signin{
     text-align: center;
@@ -123,7 +123,7 @@ span a:hover{
     color: #000;
 }
 label{
-    color: white;
+    color: black;
 }
 @media only screen and (max-width:768px){
     .side-image{
